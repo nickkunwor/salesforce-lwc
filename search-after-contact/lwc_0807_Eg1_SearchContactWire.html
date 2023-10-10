@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Search Contact from SSC using Wire Passing Params">
+    <lightning-input
+      type="search"
+      label="Enter Data to Search"
+      onchange={searchme}
+    ></lightning-input>
+
+    <template if:true={contacts.data}>
+      <template for:each={contact.data} for:item="contact">
+        <p key={contact.id}>{contact.Name}</p>
+      </template>
+    </template>
+    <template if:true={contacts.error}> errors : {contact.error} </template>
+  </lightning-card>
+</template>
