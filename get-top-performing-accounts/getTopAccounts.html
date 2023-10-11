@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <ol class="slds-m-around_medium">
+            <div class="list-group-inline">
+                <template iterator:it={accounts.data}>
+                    <div key={it.value.id}>
+                        <a if:true={it.first} class="list-group-item list-group-item-action header">
+                            <strong>List of top performing accounts: </strong>
+                        </a>
+                        <a class="list-group-item list-group-item-action">
+                            <strong>Account Name :</strong> {it.value.Name} | <strong>Annual Revenue: </strong>
+                            {it.value.AnnualRevenue}
+                        </a>
+                        <a if:true={it.last} class="list-group-item list-group-item-action footer">
+                            <strong></strong>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </ol>
+    </lightning-card>
+</template>
