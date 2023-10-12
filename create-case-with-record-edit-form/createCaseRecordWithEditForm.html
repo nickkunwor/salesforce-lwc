@@ -1,0 +1,56 @@
+<template>
+
+    <div class="slds-box" style="background-color: aquamarine;">
+
+        <lightning-record-edit-form object-api-name={caseObject} onsuccess={handleCaseCreated}>
+
+            <lightning-message></lightning-message>
+
+            <div class="slds-grid slds-wrap slds-guttters">
+
+                <div class="slds-col slds-size_1-of-3 slds-p-around_-small">
+
+                    <lightning-input-field field-name={statusField}></lightning-input-field>
+
+
+                </div>
+
+                <div class="slds-col slds-size_1-of-3 slds-p-around_-small">
+
+                    <lightning-input-field field-name={originField} value={originValue}></lightning-input-field>
+
+
+                </div>
+
+            </div>
+
+            <div class="slds-grid">
+                <div class="slds-col">
+
+                    <lightning-input-field field-name={subjectField}></lightning-input-field>
+
+
+                    <lightning-input-field field-name={descField}></lightning-input-field>
+
+
+                </div>>
+
+
+
+            </div>
+
+            <div class="slds-align_absolute-center">
+                <lightning-button class="slds-p-around-small" variant="brand" label="Cancel"
+                    onclick={handleCancel}></lightning-button>
+
+                <lightning-button type="submit" variant="brand" label="Create Case"></lightning-button>
+
+
+
+            </div>
+        </lightning-record-edit-form>
+
+
+    </div>
+
+</template>
